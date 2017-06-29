@@ -5,7 +5,7 @@ LCD_LINE_1 = 0x80 # LCD RAM address for the 1st line
 LCD_LINE_2 = 0xC0 # LCD RAM address for the 2nd line
 
 # Initialise display
-lcd.init()
+lcd.init(25,24,23,17,18,22)
  
 while True:
  
