@@ -34,5 +34,5 @@ setup(name              = 'lcdlib',
       classifiers       = classifiers,
       url               = 'https://github.com/Grant-P-W/',
       dependency_links  = ['https://github.com/Grant-P-W/lcd_lib/'],
-      install_requires  = ['me'],
+      install_requires  = [''],
       packages          = find_packages())
