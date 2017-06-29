@@ -4,12 +4,9 @@ import shutil
 import sys
 from setuptools import setup, find_packages
 
-# Bump pyglet/__init__.py version as well.
 VERSION = '1.3.0a1'
 
-long_description = '''pyglet provides an object-oriented programming
-interface for developing games and other visually-rich applications
-for Windows, Mac OS X and Linux.'''
+long_description = '''great lcd library'''
 
 # The source dist comes with batteries included, the wheel can use pip to get the rest
 is_wheel = 'bdist_wheel' in sys.argv
@@ -34,13 +31,13 @@ def create_package_list(base_package):
 
 setup_info = dict(
     # Metadata
-    name='pyglet',
+    name='lcdlib',
     version=VERSION,
-    author='Alex Holkner',
-    author_email='Alex.Holkner@gmail.com',
-    url='http://pyglet.readthedocs.org/en/latest/',
-    download_url='http://pypi.python.org/pypi/pyglet',
-    description='Cross-platform windowing and multimedia library',
+    author='Grant Wodny',
+    author_email='trduunze@gmail.com',
+    url='https://github.com/Grant-P-W/lcd_lib/',
+    download_url='https://github.com/Grant-P-W/lcd_lib/',
+    description='raspberry pi lcd library',
     long_description=long_description,
     license='BSD',
     classifiers=[
@@ -64,7 +61,7 @@ setup_info = dict(
     ],
 
     # Package info
-    packages=create_package_list('pyglet'),
+    packages=create_package_list('lcdlib'),
 
     # Add _ prefix to the names of temporary build dirs
     options={
