@@ -1,13 +1,6 @@
 import RPi.GPIO as GPIO
 import time
  
-# Define GPIO to LCD mapping
-LCD_RS = 25
-LCD_E  = 24
-LCD_D4 = 23
-LCD_D5 = 17
-LCD_D6 = 18
-LCD_D7 = 22
  
 # Define some device constants
 LCD_WIDTH = 16    # Maximum characters per line
@@ -18,10 +11,21 @@ LCD_CMD = False
 E_PULSE = 0.0005
 E_DELAY = 0.0005
 
+LCD_RS = 25
+LCD_E  = 24
+LCD_D4 = 23
+LCD_D5 = 17
+LCD_D6 = 18
+LCD_D7 = 22
 
-
-def init():
+def init(rs,e,d4,d5,d6,d7):
   # Initialise display
+  LCD_RS = rs
+  LCD_E  = e
+  LCD_D4 = d4
+  LCD_D5 = d5
+  LCD_D6 = d6
+  LCD_D7 = d7
   
   GPIO.setwarnings(False)
   GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
@@ -100,3 +104,4 @@ def string(message,line):
  
   for i in range(LCD_WIDTH):
     lcd_byte(ord(message[i]),LCD_CHR)
+ 
