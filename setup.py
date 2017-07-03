@@ -1,7 +1,6 @@
 from setuptools import setup, find_packages
  
 setup(
-    name = "mymath",
-    version = "0.1",
+    name = "lcdlib",
     packages = find_packages()
     )
