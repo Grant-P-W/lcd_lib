@@ -3,7 +3,7 @@ import time
  
  
 # Define some device constants
-LCD_WIDTH = 16    # Maximum characters per line
+LCD_WIDTH = 16
 LCD_CHR = True
 LCD_CMD = False
  
@@ -18,7 +18,7 @@ LCD_D5 = 17
 LCD_D6 = 18
 LCD_D7 = 22
 
-def init(rs,e,d4,d5,d6,d7):
+def init(rs,e,d4,d5,d6,d7,width):
   # Initialise display
   LCD_RS = rs
   LCD_E  = e
@@ -26,6 +26,7 @@ def init(rs,e,d4,d5,d6,d7):
   LCD_D5 = d5
   LCD_D6 = d6
   LCD_D7 = d7
+  LCD_WIDTH = width
   
   GPIO.setwarnings(False)
   GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
